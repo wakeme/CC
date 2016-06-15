@@ -19,5 +19,5 @@ Compile `PairsMapReduce.java` and create a jar:
 ```
 Run the application
 ```Bash
-[src]$ hadoop jar com.wakeme.homework1.pairs.jar com.wakeme.homework1.PairsMapReduce input.txt pairs.out
+[src]$ hadoop jar com.wakeme.homework1.pairs.jar com.wakeme.homework1.PairsMapReduce input.txt hw1.out
 ```
