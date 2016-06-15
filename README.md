@@ -8,7 +8,7 @@
     * HBASE:    hbase-1.1.5
 <br>
 ## How to Run My Code
-First, make sure you have `jdk, hadoop, spark, scala, hbase` on your computer<br>
+First, make sure you have `jdk, hadoop, spark, scala, hbase` on your server<br>
 Then, configure environment variables
 ### Homework1
 `scp` the `/Homework1` folder to server<br>
