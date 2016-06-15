@@ -22,7 +22,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.KeyValueTextInputFormat;
  
 //从hdfs读取文件存到hbase
-public class StoreHbase {
+public class Main {
  
     public static void main(String[] args) throws Exception {
         System.exit(run());
@@ -36,7 +36,7 @@ public class StoreHbase {
     	conf.set("hbase.master", "192.168.31.171:16010"); //TO-DO
  
         Job job = Job.getInstance(conf, "wordcount");
-        job.setJarByClass(StoreHbase.class);
+        job.setJarByClass(Main.class);
  
         job.setInputFormatClass(KeyValueTextInputFormat.class);
  

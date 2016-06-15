@@ -13,7 +13,7 @@ import org.apache.spark.rdd.RDD
 import scala.collection.mutable.Map
 import scala.util.matching._
 
-object CoOccurrenceMapReduce {
+object Main {
   def main(args: Array[String]) {
     if (args.length < 2) {
       System.err.println("Usage: <input> <output>")

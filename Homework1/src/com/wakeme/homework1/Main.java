@@ -22,15 +22,15 @@ import org.apache.log4j.Logger;
  * Time: 22:28
  */
 
-public class PairsMapReduce {
-    private static final Logger log = Logger.getLogger(PairsMapReduce.class);
+public class Main {
+    private static final Logger log = Logger.getLogger(Main.class);
 
     public static void main(String[] args) throws Exception {
         if (args.length < 2) {
             log.error("Usage: <input> <output>");
         }
         Job job = Job.getInstance(new Configuration());
-        job.setJarByClass(PairsMapReduce.class);
+        job.setJarByClass(Main.class);
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         doMapReduce(job, args[0], PairsOccurrenceMapper.class, args[1], "pairs-co-occur", PairsReducer.class);
@@ -97,4 +97,3 @@ class PairsReducer extends Reducer<Text,IntWritable,Text,IntWritable> {
         context.write(key,totalCount);
     }
 }
-
