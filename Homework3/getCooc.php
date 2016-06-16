@@ -16,13 +16,13 @@ $word2 = isset($_POST['word2']) ? $_POST['word2'] : null;
 if ($word1 != null || $word2 != null)
 {
     if ($word1 != null && $word2 != null) 
-        $request = $word1 . "_" . $word2
+        $request = $word1 . "_" . $word2;
     else if ($word1 != null && $word2 == null) 
-        $request = $word1 . "_*"
+        $request = $word1 . "_*";
     else if ($word2 != null && $word1 == null) 
-        $request = $word2 . "_*"
+        $request = $word2 . "_*";
     $curl = ($url) . $request;
-    
+
     $ch = curl_init();
     curl_setopt($ch, CURLOPT_URL, $curl);
     curl_setopt($ch, CURLOPT_HTTPHEADER , array("Accept:application/json"));
@@ -51,7 +51,7 @@ if ($word1 != null || $word2 != null)
         echo "</tr>";
     }
     echo "</tbody></table>";
-    echo "</body>"
+    echo "</body>";
     exit;
     // echo json_encode($result);
 }
