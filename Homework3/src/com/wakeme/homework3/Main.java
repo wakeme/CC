@@ -32,8 +32,8 @@ public class Main {
         Configuration conf = new Configuration();
         conf = HBaseConfiguration.create(conf);
     	conf.set("hbase.zookeeper.property.clientPort", "2181"); 
-    	conf.set("hbase.zookeeper.quorum", "192.168.31.171"); 
-    	conf.set("hbase.master", "192.168.31.171:16010"); //TO-DO
+    	conf.set("hbase.zookeeper.quorum", "localhost"); 
+    	conf.set("hbase.master", "localhost:16010"); //TO-DO
  
         Job job = Job.getInstance(conf, "wordcount");
         job.setJarByClass(Main.class);
@@ -43,7 +43,7 @@ public class Main {
         job.setMapOutputKeyClass(Text.class);
         job.setMapOutputValueClass(Text.class);
  
-        FileInputFormat.addInputPath(job, new Path("out/part-r-00000"));
+        FileInputFormat.addInputPath(job, new Path("h1.out/part-r-00000"));
         // 把数据写入Hbase数据库
  
         TableMapReduceUtil.initTableReducerJob("word", MyHbaseReducer.class, job);
