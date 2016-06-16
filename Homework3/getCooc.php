@@ -70,7 +70,7 @@ if ($word1 != null || $word2 != null)
     echo "                <td><label>Word2</label></td>";
     echo "                <td><input type=\"text\" name=\"word2\" /></td>";
     echo "            </tr>";
-    echo "            <tr><td><input type=\"submit\" value=\"Request\" /></td></tr>";
+    echo "            <tr><td><input type=\"submit\" value=\"Query\" /></td></tr>";
     echo "        </table>";
     echo "    </form>";
     echo "</body>";
