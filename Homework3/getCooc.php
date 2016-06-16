@@ -9,7 +9,7 @@
 
 define("TEST", "true");
 
-$url = "http://localhost:8090/";
+$url = "http://localhost:8090/word/";
 $word1 = isset($_POST['word1']) ? $_POST['word1'] : null;
 $word2 = isset($_POST['word2']) ? $_POST['word2'] : null;
 
